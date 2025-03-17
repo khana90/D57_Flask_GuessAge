@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    in this file we will have multi-line statements will differnt markup-->
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    {% for blog_post in posts: %}
+         {% if blog_post["id"] == 2: %}
+          <h1> {{ blog_post["title"] }}</h1>
+          <h2> {{ blog_post["subtitle"] }}</h2>
+<!--    <a href="{{ url_for ('get_blog')}}">Go to Blog </a>-->
+          {% endif %}
+    {% endfor %}
+
+</body>
+</html>
